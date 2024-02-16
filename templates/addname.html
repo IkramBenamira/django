@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un étudiant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Ajouter un étudiant</h1>
+    <form id="studentForm" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="firstName">Prénom:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+        
+        <label for="lastName">Nom:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+        
+        <label for="studentID">Matricule:</label>
+        <input type="text" id="studentID" name="studentID" required><br><br>
+        
+        <button type="submit">Ajouter</button>
+    </form>
+</body>
+</html>
